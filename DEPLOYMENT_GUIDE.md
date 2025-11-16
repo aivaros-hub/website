@@ -1,95 +1,103 @@
-# Aivaros.ai Website - Auto Deployment Setup
+# Aivaros.ai Website - Cloudflare Pages Deployment
 
-This repository is configured for automatic deployment to Vercel on every push to `main`.
+This repository is configured for automatic deployment to Cloudflare Pages (100% FREE, unlimited bandwidth).
 
-## 🚀 Setup Instructions
+## 🚀 One-Time Setup Instructions
 
-### 1. Create Vercel Project
+### Step 1: Create Cloudflare Pages Project
 
-1. Go to [vercel.com](https://vercel.com) and sign up/login
-2. Click **"Add New Project"**
-3. Import this GitHub repository: `aivaros-hub/website`
-4. Click **Deploy**
+1. Go to [dash.cloudflare.com](https://dash.cloudflare.com) and sign up/login (free)
+2. Click **Workers & Pages** in the left sidebar
+3. Click **Create application** → **Pages** → **Connect to Git**
+4. Connect your GitHub account and select `aivaros-hub/website`
+5. Configure build settings:
+   - **Framework preset**: Next.js
+   - **Build command**: `npm run build`
+   - **Build output directory**: `.next`
+6. Click **Save and Deploy**
 
-### 2. Get Vercel Credentials
+### Step 2: Get Cloudflare Credentials
 
-After your first deployment, get these values from Vercel:
+#### Get API Token:
+1. Go to [dash.cloudflare.com/profile/api-tokens](https://dash.cloudflare.com/profile/api-tokens)
+2. Click **Create Token**
+3. Use template: **Edit Cloudflare Workers**
+4. Or create custom token with permissions:
+   - Account → Cloudflare Pages → Edit
+5. Click **Continue to summary** → **Create Token**
+6. **Copy the token** (save it securely - you won't see it again!)
 
-#### Get Vercel Token:
-1. Go to [Vercel Account Settings → Tokens](https://vercel.com/account/tokens)
-2. Create a new token with name: `GitHub Actions`
-3. Copy the token (save it securely)
+#### Get Account ID:
+1. Go to [dash.cloudflare.com](https://dash.cloudflare.com)
+2. Click **Workers & Pages** in sidebar
+3. Your **Account ID** is shown in the right sidebar
+4. Or find it in the URL: `dash.cloudflare.com/YOUR_ACCOUNT_ID/`
 
-#### Get Project IDs:
-Run these commands in your terminal:
-
-```bash
-# Install Vercel CLI
-npm install -g vercel
-
-# Login to Vercel
-vercel login
-
-# Link your project
-vercel link
-
-# Get your IDs (they're in .vercel/project.json)
-cat .vercel/project.json
-```
-
-You'll see output like:
-```json
-{
-  "orgId": "team_xxxxxxxxxxxx",
-  "projectId": "prj_xxxxxxxxxxxx"
-}
-```
-
-### 3. Add GitHub Secrets
+### Step 3: Add GitHub Secrets
 
 1. Go to your GitHub repository: `https://github.com/aivaros-hub/website`
 2. Navigate to **Settings → Secrets and variables → Actions**
-3. Click **"New repository secret"** and add these three secrets:
+3. Click **"New repository secret"** and add these TWO secrets:
 
 | Secret Name | Value | Where to Get It |
 |------------|-------|-----------------|
-| `VERCEL_TOKEN` | Your Vercel token | From Step 2 above |
-| `VERCEL_ORG_ID` | Your org/team ID | From `.vercel/project.json` |
-| `VERCEL_PROJECT_ID` | Your project ID | From `.vercel/project.json` |
+| `CLOUDFLARE_API_TOKEN` | Your API token | From Step 2 above |
+| `CLOUDFLARE_ACCOUNT_ID` | Your account ID | From Step 2 above |
 
-### 4. Connect Your Domain (aivaros.ai)
+### Step 4: Connect Your Domain (aivaros.ai)
 
-1. In Vercel dashboard, go to your project
-2. Click **Settings → Domains**
-3. Add: `aivaros.ai` and `www.aivaros.ai`
-4. Update your GoDaddy DNS:
+#### In Cloudflare:
+1. In Cloudflare dashboard, go to **Workers & Pages**
+2. Click on your `aivaros-website` project
+3. Go to **Custom domains** tab
+4. Click **Set up a custom domain**
+5. Enter: `aivaros.ai`
+6. Cloudflare will show you DNS records to add
 
-**For aivaros.ai:**
-```
-Type: A Record
-Name: @
-Value: 76.76.21.21
-TTL: 600
-```
+#### Update GoDaddy DNS:
 
-**For www.aivaros.ai:**
+**Option A: Use Cloudflare Nameservers (Recommended)**
+1. In Cloudflare, click **Add site** and enter `aivaros.ai`
+2. Cloudflare will give you 2 nameservers (e.g., `nina.ns.cloudflare.com`)
+3. Go to GoDaddy → Domain Settings → Nameservers
+4. Change to **Custom** and enter Cloudflare's nameservers
+5. Wait 5-30 minutes for DNS propagation
+
+**Option B: Keep GoDaddy DNS (Add CNAME)**
+1. Go to GoDaddy → DNS Management for aivaros.ai
+2. Add these records:
+
 ```
 Type: CNAME
+Name: @
+Value: aivaros-website.pages.dev
+TTL: 600
+
+Type: CNAME  
 Name: www
-Value: cname.vercel-dns.com
+Value: aivaros-website.pages.dev
 TTL: 600
 ```
 
 ## ✅ That's It!
 
-Now every time you push to `main`, your site will automatically deploy to production!
+Now every time you push to `main`, your site will automatically deploy to Cloudflare Pages!
+
+## 🎉 Benefits of Cloudflare Pages
+
+- ✅ **100% FREE forever** (no bandwidth limits)
+- ✅ **Unlimited requests**
+- ✅ **Global CDN** (fast worldwide)
+- ✅ **Automatic HTTPS/SSL**
+- ✅ **Built-in DDoS protection**
+- ✅ **No credit card required**
 
 ## 🔄 How It Works
 
 1. Push code to GitHub `main` branch
 2. GitHub Action triggers automatically
 3. Builds your Next.js site
-4. Deploys to Vercel
+4. Deploys to Cloudflare Pages
 5. Your site is live at https://aivaros.ai 🎉
 
 ## 📝 Local Development
@@ -112,5 +120,18 @@ npm start
 
 - **Framework**: Next.js 14.2
 - **Styling**: Tailwind CSS
-- **Deployment**: Vercel
+- **Deployment**: Cloudflare Pages
 - **CI/CD**: GitHub Actions
+
+## 🔧 Troubleshooting
+
+### If deployment fails:
+1. Check GitHub Actions logs
+2. Verify secrets are set correctly
+3. Make sure Cloudflare project name is `aivaros-website`
+4. Check build logs in Cloudflare dashboard
+
+### If domain doesn't work:
+1. Wait 5-30 minutes for DNS propagation
+2. Verify DNS records in Cloudflare/GoDaddy
+3. Check SSL certificate is active in Cloudflare
