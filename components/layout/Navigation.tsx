@@ -123,7 +123,8 @@ export default function Navigation() {
           </div>
 
           {/* Right Side Actions */}
-          <div className="hidden lg:flex items-center">
+          <div className="hidden lg:flex items-center space-x-4">
+            <ThemeToggle />
             <Link
               href="/contact"
               className="px-5 py-2 bg-indigo-600 hover:bg-indigo-700 text-white text-sm font-medium rounded-full transition-colors duration-200"
@@ -200,13 +201,21 @@ export default function Navigation() {
                 </Link>
               )
             ))}
-            <Link
-              href="/contact"
-              onClick={() => setMobileMenuOpen(false)}
-              className="block w-full mt-4 px-6 py-3 bg-indigo-600 text-white text-center rounded-full font-medium"
-            >
-              Book Demo
-            </Link>
+            
+            {/* Mobile Theme Toggle & CTA */}
+            <div className="pt-4 mt-4 border-t border-gray-200 dark:border-gray-700 space-y-3">
+              <div className="flex items-center justify-between px-4">
+                <span className="text-sm font-medium text-gray-700 dark:text-gray-300">Dark Mode</span>
+                <ThemeToggle />
+              </div>
+              <Link
+                href="/contact"
+                onClick={() => setMobileMenuOpen(false)}
+                className="block w-full px-6 py-3 bg-indigo-600 text-white text-center rounded-full font-medium"
+              >
+                Book Demo
+              </Link>
+            </div>
           </div>
         </div>
       )}
