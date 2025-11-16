@@ -155,10 +155,10 @@ export default function Navigation() {
           <div className="px-4 py-4 space-y-2">
             {navLinks.map((link) => (
               link.dropdown ? (
-                <div key={link.label}>
-                                    <button
+                <div key={link.label} className="w-full">
+                  <button
                     onClick={() => setMobileDropdownOpen(mobileDropdownOpen === link.label ? null : link.label)}
-                    className={`w-full px-4 py-2 rounded-lg text-sm font-medium transition-all duration-200 ${
+                    className={`w-full text-left px-4 py-3 rounded-lg text-base font-medium transition-all duration-200 ${
                       isDropdownActive(link.dropdown)
                         ? "text-indigo-500 bg-indigo-50 dark:bg-indigo-900/30 dark:text-indigo-400"
                         : "text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white hover:bg-gray-50 dark:hover:bg-gray-800"
@@ -173,7 +173,7 @@ export default function Navigation() {
                           key={item.href}
                           href={item.href}
                           onClick={() => setMobileMenuOpen(false)}
-                          className={`block px-4 py-2 rounded-lg text-sm transition-colors ${
+                          className={`block px-4 py-3 rounded-lg text-base transition-colors ${
                             isActive(item.href)
                               ? "text-indigo-500 bg-indigo-50 dark:bg-indigo-900/30 dark:text-indigo-400"
                               : "text-gray-600 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-800"
