@@ -64,22 +64,8 @@ export default function ProductsPage() {
                     </svg>
                   </div>
                   <div>
-                    <h4 className="font-bold text-gray-900 dark:text-white mb-2">AI-Powered ATS</h4>
-                    <p className="text-gray-600 dark:text-gray-300 text-sm">Intelligent resume parsing, candidate enrichment, and automated job matching</p>
-                  </div>
-                </div>
-              </div>
-
-              <div className="p-6 rounded-2xl bg-purple-50 dark:bg-purple-900/20 border border-purple-100 dark:border-purple-800">
-                <div className="flex items-start space-x-4">
-                  <div className="w-12 h-12 rounded-xl bg-purple-100 dark:bg-purple-800 flex items-center justify-center flex-shrink-0">
-                    <svg className="w-6 h-6 text-purple-600 dark:text-purple-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
-                    </svg>
-                  </div>
-                  <div>
-                    <h4 className="font-bold text-gray-900 dark:text-white mb-2">Recruitment Automation</h4>
-                    <p className="text-gray-600 dark:text-gray-300 text-sm">Automated outreach, candidate screening, and interview scheduling</p>
+                    <h4 className="font-bold text-gray-900 dark:text-white mb-2">AI-Powered ATS & Recruitment</h4>
+                    <p className="text-gray-600 dark:text-gray-300 text-sm">Intelligent resume parsing, candidate enrichment, automated job matching, outreach, screening, and interview scheduling</p>
                   </div>
                 </div>
               </div>

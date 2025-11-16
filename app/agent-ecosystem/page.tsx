@@ -2,7 +2,7 @@ import Link from "next/link";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "AI Agent Ecosystem - Aivaros.ai",
+  title: "AI Agent Platform - Aivaros.ai",
   description: "A comprehensive platform for deploying, orchestrating, and managing AI agents across your entire organization. Multi-agent orchestration, workflow automation, and enterprise integrations.",
 };
 
@@ -14,7 +14,7 @@ export default function AgentEcosystemPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-4xl mx-auto">
             <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold mb-6 leading-tight dark:text-white">
-              AI Agent <span className="gradient-text">Ecosystem</span>
+              AI Agent <span className="gradient-text">Platform</span>
             </h1>
             <p className="text-xl sm:text-2xl text-gray-600 dark:text-gray-300 mb-10 leading-relaxed">
               A comprehensive platform for deploying, orchestrating, and managing AI agents across your entire organization
@@ -233,7 +233,7 @@ export default function AgentEcosystemPage() {
                   </p>
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                     <div>
-                      <h4 className="font-bold text-gray-900 dark:text-white mb-2">Recruitment Agents</h4>
+                      <h4 className="font-bold text-gray-900 dark:text-white mb-2">ATS & Recruitment Agents</h4>
                       <p className="text-gray-600 dark:text-gray-300 text-sm">Resume parsing, candidate matching, automated outreach, and interview scheduling</p>
                     </div>
                     <div>

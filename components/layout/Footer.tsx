@@ -6,8 +6,8 @@ export default function Footer() {
 
   const platformLinks = [
     { href: "/", label: "Home" },
-    { href: "/agent-ecosystem", label: "Agent Ecosystem" },
-    { href: "/products", label: "Products" },
+    { href: "/agent-ecosystem", label: "Agent Platform" },
+    { href: "/products", label: "AI Solutions" },
     { href: "/industries", label: "Industries" },
   ];
 
