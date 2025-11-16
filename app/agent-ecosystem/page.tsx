@@ -10,13 +10,13 @@ export default function AgentEcosystemPage() {
   return (
     <div className="pt-20">
       {/* Hero Section */}
-      <section className="relative overflow-hidden bg-gradient-to-br from-purple-50 via-white to-blue-50 py-20 sm:py-32">
+      <section className="relative overflow-hidden bg-gradient-to-br from-purple-50 via-white to-blue-50 dark:from-gray-900 dark:via-purple-900/10 dark:to-gray-900 py-20 sm:py-32">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-4xl mx-auto">
-            <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold mb-6 leading-tight">
+            <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold mb-6 leading-tight dark:text-white">
               AI Agent <span className="gradient-text">Ecosystem</span>
             </h1>
-            <p className="text-xl sm:text-2xl text-gray-600 mb-10 leading-relaxed">
+            <p className="text-xl sm:text-2xl text-gray-600 dark:text-gray-300 mb-10 leading-relaxed">
               A comprehensive platform for deploying, orchestrating, and managing AI agents across your entire organization
             </p>
           </div>
@@ -24,16 +24,16 @@ export default function AgentEcosystemPage() {
       </section>
 
       {/* Platform Overview */}
-      <section className="py-20 bg-white">
+      <section className="py-20 bg-white dark:bg-gray-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-4xl mx-auto">
-            <h2 className="text-4xl font-bold text-gray-900 mb-6">
+          <div className="mx-auto">
+            <h2 className="text-4xl font-bold text-gray-900 dark:text-white mb-6">
               What is the <span className="gradient-text">Aivaros.ai Platform</span>?
             </h2>
-            <p className="text-xl text-gray-600 mb-6 leading-relaxed">
+            <p className="text-xl text-gray-600 dark:text-gray-300 mb-6 leading-relaxed">
               Aivaros.ai provides a universal AI operating system where organizations can deploy and orchestrate specialized AI agents across different domains and industries. Think of it as the foundational layer that powers intelligent automation throughout your business.
             </p>
-            <p className="text-xl text-gray-600 leading-relaxed">
+            <p className="text-xl text-gray-600 dark:text-gray-300 leading-relaxed">
               Our platform enables multiple AI agents to work together seamlessly, automating complex workflows, making intelligent decisions, and continuously learning from your business operations.
             </p>
           </div>
@@ -41,20 +41,20 @@ export default function AgentEcosystemPage() {
       </section>
 
       {/* Core Platform Features */}
-      <section className="py-20 bg-gradient-to-b from-gray-50 to-white">
+      <section className="py-20 bg-gradient-to-b from-gray-50 to-white dark:from-gray-800 dark:to-gray-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-4">
+            <h2 className="text-4xl sm:text-5xl font-bold text-gray-900 dark:text-white mb-4">
               Platform <span className="gradient-text">Capabilities</span>
             </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            <p className="text-xl sm:text-2xl text-gray-600 dark:text-gray-300 mb-10 leading-relaxed max-w-3xl mx-auto">
               Built for enterprise-grade AI agent deployment and orchestration
             </p>
           </div>
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
             {/* Multi-Agent Orchestration */}
-            <div className="p-10 rounded-3xl bg-white border-2 border-purple-100 hover:border-purple-300 hover:shadow-xl transition-all duration-300">
+            <div className="p-10 rounded-3xl bg-white dark:bg-gray-800 border-2 border-purple-100 dark:border-purple-900 hover:border-purple-300 dark:hover:border-purple-700 hover:shadow-xl transition-all duration-300">
               <div className="flex items-start space-x-6">
                 <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-purple-500 to-purple-600 flex items-center justify-center flex-shrink-0">
                   <svg className="w-8 h-8 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -62,11 +62,11 @@ export default function AgentEcosystemPage() {
                   </svg>
                 </div>
                 <div className="flex-1">
-                  <h3 className="text-2xl font-bold text-gray-900 mb-4">Multi-Agent Orchestration</h3>
-                  <p className="text-gray-600 mb-4 leading-relaxed">
+                  <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">Multi-Agent Orchestration</h3>
+                  <p className="text-gray-600 dark:text-gray-300 mb-4 leading-relaxed">
                     Coordinate dozens of specialized agents working together to solve complex business challenges across departments and systems.
                   </p>
-                  <ul className="space-y-2 text-gray-600">
+                  <ul className="space-y-2 text-gray-600 dark:text-gray-300">
                     <li className="flex items-start">
                       <svg className="w-5 h-5 text-purple-500 mr-2 mt-1 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
@@ -91,7 +91,7 @@ export default function AgentEcosystemPage() {
             </div>
 
             {/* Workflow Automation */}
-            <div className="p-10 rounded-3xl bg-white border-2 border-blue-100 hover:border-blue-300 hover:shadow-xl transition-all duration-300">
+            <div className="p-10 rounded-3xl bg-white dark:bg-gray-800 border-2 border-blue-100 dark:border-blue-900 hover:border-blue-300 dark:hover:border-blue-700 hover:shadow-xl transition-all duration-300">
               <div className="flex items-start space-x-6">
                 <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-blue-500 to-blue-600 flex items-center justify-center flex-shrink-0">
                   <svg className="w-8 h-8 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -99,11 +99,11 @@ export default function AgentEcosystemPage() {
                   </svg>
                 </div>
                 <div className="flex-1">
-                  <h3 className="text-2xl font-bold text-gray-900 mb-4">Workflow Automation</h3>
-                  <p className="text-gray-600 mb-4 leading-relaxed">
+                  <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">Workflow Automation</h3>
+                  <p className="text-gray-600 dark:text-gray-300 mb-4 leading-relaxed">
                     Build sophisticated automation pipelines that span across departments, with intelligent agents that learn and adapt over time.
                   </p>
-                  <ul className="space-y-2 text-gray-600">
+                  <ul className="space-y-2 text-gray-600 dark:text-gray-300">
                     <li className="flex items-start">
                       <svg className="w-5 h-5 text-blue-500 mr-2 mt-1 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
@@ -128,7 +128,7 @@ export default function AgentEcosystemPage() {
             </div>
 
             {/* Integration Layer */}
-            <div className="p-10 rounded-3xl bg-white border-2 border-teal-100 hover:border-teal-300 hover:shadow-xl transition-all duration-300">
+            <div className="p-10 rounded-3xl bg-white dark:bg-gray-800 border-2 border-teal-100 dark:border-teal-900 hover:border-teal-300 dark:hover:border-teal-700 hover:shadow-xl transition-all duration-300">
               <div className="flex items-start space-x-6">
                 <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-teal-500 to-teal-600 flex items-center justify-center flex-shrink-0">
                   <svg className="w-8 h-8 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -136,11 +136,11 @@ export default function AgentEcosystemPage() {
                   </svg>
                 </div>
                 <div className="flex-1">
-                  <h3 className="text-2xl font-bold text-gray-900 mb-4">Integration Layer</h3>
-                  <p className="text-gray-600 mb-4 leading-relaxed">
+                  <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">Integration Layer</h3>
+                  <p className="text-gray-600 dark:text-gray-300 mb-4 leading-relaxed">
                     Connect seamlessly with your existing tools, CRMs, HRIS, EMR systems, DevOps platforms, and more through our robust integration framework.
                   </p>
-                  <ul className="space-y-2 text-gray-600">
+                  <ul className="space-y-2 text-gray-600 dark:text-gray-300">
                     <li className="flex items-start">
                       <svg className="w-5 h-5 text-teal-500 mr-2 mt-1 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
@@ -165,7 +165,7 @@ export default function AgentEcosystemPage() {
             </div>
 
             {/* Analytics Dashboard */}
-            <div className="p-10 rounded-3xl bg-white border-2 border-indigo-100 hover:border-indigo-300 hover:shadow-xl transition-all duration-300">
+            <div className="p-10 rounded-3xl bg-white dark:bg-gray-800 border-2 border-indigo-100 dark:border-indigo-900 hover:border-indigo-300 dark:hover:border-indigo-700 hover:shadow-xl transition-all duration-300">
               <div className="flex items-start space-x-6">
                 <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-indigo-500 to-indigo-600 flex items-center justify-center flex-shrink-0">
                   <svg className="w-8 h-8 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -173,11 +173,11 @@ export default function AgentEcosystemPage() {
                   </svg>
                 </div>
                 <div className="flex-1">
-                  <h3 className="text-2xl font-bold text-gray-900 mb-4">Analytics Dashboard</h3>
-                  <p className="text-gray-600 mb-4 leading-relaxed">
+                  <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">Analytics Dashboard</h3>
+                  <p className="text-gray-600 dark:text-gray-300 mb-4 leading-relaxed">
                     Real-time insights into agent performance, workflow efficiency, and business outcomes with comprehensive analytics and reporting.
                   </p>
-                  <ul className="space-y-2 text-gray-600">
+                  <ul className="space-y-2 text-gray-600 dark:text-gray-300">
                     <li className="flex items-start">
                       <svg className="w-5 h-5 text-indigo-500 mr-2 mt-1 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
@@ -205,20 +205,20 @@ export default function AgentEcosystemPage() {
       </section>
 
       {/* Industry Agent Suites Section */}
-      <section className="py-20 bg-white">
+      <section className="py-20 bg-white dark:bg-gray-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-4">
+            <h2 className="text-4xl sm:text-5xl font-bold text-gray-900 dark:text-white mb-4">
               Industry-Specific <span className="gradient-text">Agent Suites</span>
             </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            <p className="text-xl sm:text-2xl text-gray-600 dark:text-gray-300 mb-10 leading-relaxed max-w-3xl mx-auto">
               Pre-configured agent ecosystems designed for specific industries and use cases
             </p>
           </div>
 
           <div className="space-y-12">
             {/* MetaTalio */}
-            <div className="p-10 rounded-3xl bg-gradient-to-br from-purple-50 to-white border-2 border-purple-200">
+            <div className="p-10 rounded-3xl bg-gradient-to-br from-purple-50 to-white dark:from-purple-900/20 dark:to-gray-800 border-2 border-purple-200 dark:border-purple-800">
               <div className="flex items-start space-x-6">
                 <div className="w-20 h-20 rounded-2xl bg-gradient-to-br from-purple-500 to-purple-600 flex items-center justify-center flex-shrink-0">
                   <svg className="w-10 h-10 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -226,27 +226,27 @@ export default function AgentEcosystemPage() {
                   </svg>
                 </div>
                 <div className="flex-1">
-                  <h3 className="text-3xl font-bold text-gray-900 mb-2">MetaTalio - HR & Workforce Agents</h3>
-                  <p className="text-purple-600 font-semibold mb-4">For IT Staffing Companies & HR Teams</p>
-                  <p className="text-gray-600 mb-6 text-lg leading-relaxed">
+                  <h3 className="text-3xl font-bold text-gray-900 dark:text-white mb-2">MetaTalio - HR & Workforce Agents</h3>
+                  <p className="text-purple-600 dark:text-purple-400 font-semibold mb-4">For IT Staffing Companies & HR Teams</p>
+                  <p className="text-gray-600 dark:text-gray-300 mb-6 text-lg leading-relaxed">
                     Transform your human resources and staffing operations with AI agents that handle recruitment, employee management, payroll, and workforce analytics.
                   </p>
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                     <div>
-                      <h4 className="font-bold text-gray-900 mb-2">Recruitment Agents</h4>
-                      <p className="text-gray-600 text-sm">Resume parsing, candidate matching, automated outreach, and interview scheduling</p>
+                      <h4 className="font-bold text-gray-900 dark:text-white mb-2">Recruitment Agents</h4>
+                      <p className="text-gray-600 dark:text-gray-300 text-sm">Resume parsing, candidate matching, automated outreach, and interview scheduling</p>
                     </div>
                     <div>
-                      <h4 className="font-bold text-gray-900 mb-2">HRMS Agents</h4>
-                      <p className="text-gray-600 text-sm">Employee onboarding, timesheet management, payroll processing, and compliance</p>
+                      <h4 className="font-bold text-gray-900 dark:text-white mb-2">HRMS Agents</h4>
+                      <p className="text-gray-600 dark:text-gray-300 text-sm">Employee onboarding, timesheet management, payroll processing, and compliance</p>
                     </div>
                     <div>
-                      <h4 className="font-bold text-gray-900 mb-2">IT Employee Agents</h4>
-                      <p className="text-gray-600 text-sm">Equipment provisioning, access management, and employee lifecycle automation</p>
+                      <h4 className="font-bold text-gray-900 dark:text-white mb-2">IT Employee Agents</h4>
+                      <p className="text-gray-600 dark:text-gray-300 text-sm">Equipment provisioning, access management, and employee lifecycle automation</p>
                     </div>
                     <div>
-                      <h4 className="font-bold text-gray-900 mb-2">Analytics Agents</h4>
-                      <p className="text-gray-600 text-sm">Workforce insights, productivity tracking, and predictive analytics</p>
+                      <h4 className="font-bold text-gray-900 dark:text-white mb-2">Analytics Agents</h4>
+                      <p className="text-gray-600 dark:text-gray-300 text-sm">Workforce insights, productivity tracking, and predictive analytics</p>
                     </div>
                   </div>
                 </div>
@@ -254,7 +254,7 @@ export default function AgentEcosystemPage() {
             </div>
 
             {/* Enterprise Automation */}
-            <div className="p-10 rounded-3xl bg-gradient-to-br from-blue-50 to-white border-2 border-blue-200">
+            <div className="p-10 rounded-3xl bg-gradient-to-br from-blue-50 to-white dark:from-blue-900/20 dark:to-gray-800 border-2 border-blue-200 dark:border-blue-800">
               <div className="flex items-start space-x-6">
                 <div className="w-20 h-20 rounded-2xl bg-gradient-to-br from-blue-500 to-blue-600 flex items-center justify-center flex-shrink-0">
                   <svg className="w-10 h-10 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -262,27 +262,27 @@ export default function AgentEcosystemPage() {
                   </svg>
                 </div>
                 <div className="flex-1">
-                  <h3 className="text-3xl font-bold text-gray-900 mb-2">Enterprise Automation - Tech & DevOps Agents</h3>
-                  <p className="text-blue-600 font-semibold mb-4">For Software Teams & Engineering Organizations</p>
-                  <p className="text-gray-600 mb-6 text-lg leading-relaxed">
+                  <h3 className="text-3xl font-bold text-gray-900 dark:text-white mb-2">Enterprise Automation - Tech & DevOps Agents</h3>
+                  <p className="text-blue-600 dark:text-blue-400 font-semibold mb-4">For Software Teams & Engineering Organizations</p>
+                  <p className="text-gray-600 dark:text-gray-300 mb-6 text-lg leading-relaxed">
                     Accelerate your software delivery with AI agents that automate DevOps pipelines, QA testing, security scanning, and incident response.
                   </p>
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                     <div>
-                      <h4 className="font-bold text-gray-900 mb-2">DevOps Agents</h4>
-                      <p className="text-gray-600 text-sm">CI/CD orchestration, deployment automation, and infrastructure management</p>
+                      <h4 className="font-bold text-gray-900 dark:text-white mb-2">DevOps Agents</h4>
+                      <p className="text-gray-600 dark:text-gray-300 text-sm">CI/CD orchestration, deployment automation, and infrastructure management</p>
                     </div>
                     <div>
-                      <h4 className="font-bold text-gray-900 mb-2">QA Testing Agents</h4>
-                      <p className="text-gray-600 text-sm">Automated test generation, execution, regression testing, and bug detection</p>
+                      <h4 className="font-bold text-gray-900 dark:text-white mb-2">QA Testing Agents</h4>
+                      <p className="text-gray-600 dark:text-gray-300 text-sm">Automated test generation, execution, regression testing, and bug detection</p>
                     </div>
                     <div>
-                      <h4 className="font-bold text-gray-900 mb-2">Security Agents</h4>
-                      <p className="text-gray-600 text-sm">Vulnerability scanning, compliance checks, and security automation</p>
+                      <h4 className="font-bold text-gray-900 dark:text-white mb-2">Security Agents</h4>
+                      <p className="text-gray-600 dark:text-gray-300 text-sm">Vulnerability scanning, compliance checks, and security automation</p>
                     </div>
                     <div>
-                      <h4 className="font-bold text-gray-900 mb-2">Incident Response</h4>
-                      <p className="text-gray-600 text-sm">Automated alerting, root cause analysis, and resolution workflows</p>
+                      <h4 className="font-bold text-gray-900 dark:text-white mb-2">Incident Response</h4>
+                      <p className="text-gray-600 dark:text-gray-300 text-sm">Automated alerting, root cause analysis, and resolution workflows</p>
                     </div>
                   </div>
                 </div>
@@ -290,7 +290,7 @@ export default function AgentEcosystemPage() {
             </div>
 
             {/* Healthcare */}
-            <div className="p-10 rounded-3xl bg-gradient-to-br from-teal-50 to-white border-2 border-teal-200">
+            <div className="p-10 rounded-3xl bg-gradient-to-br from-teal-50 to-white dark:from-teal-900/20 dark:to-gray-800 border-2 border-teal-200 dark:border-teal-800">
               <div className="flex items-start space-x-6">
                 <div className="w-20 h-20 rounded-2xl bg-gradient-to-br from-teal-500 to-teal-600 flex items-center justify-center flex-shrink-0">
                   <svg className="w-10 h-10 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -298,27 +298,27 @@ export default function AgentEcosystemPage() {
                   </svg>
                 </div>
                 <div className="flex-1">
-                  <h3 className="text-3xl font-bold text-gray-900 mb-2">Healthcare Agents</h3>
-                  <p className="text-teal-600 font-semibold mb-4">For Healthcare Providers & Medical Practices</p>
-                  <p className="text-gray-600 mb-6 text-lg leading-relaxed">
+                  <h3 className="text-3xl font-bold text-gray-900 dark:text-white mb-2">Healthcare Agents</h3>
+                  <p className="text-teal-600 dark:text-teal-400 font-semibold mb-4">For Healthcare Providers & Medical Practices</p>
+                  <p className="text-gray-600 dark:text-gray-300 mb-6 text-lg leading-relaxed">
                     Enhance patient care and operational efficiency with AI agents specialized for healthcare providers, from intake to insurance processing.
                   </p>
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                     <div>
-                      <h4 className="font-bold text-gray-900 mb-2">Patient Intake Agents</h4>
-                      <p className="text-gray-600 text-sm">Automated onboarding, health history collection, and documentation</p>
+                      <h4 className="font-bold text-gray-900 dark:text-white mb-2">Patient Intake Agents</h4>
+                      <p className="text-gray-600 dark:text-gray-300 text-sm">Automated onboarding, health history collection, and documentation</p>
                     </div>
                     <div>
-                      <h4 className="font-bold text-gray-900 mb-2">Scheduling Agents</h4>
-                      <p className="text-gray-600 text-sm">Appointment booking, reminders, and calendar optimization</p>
+                      <h4 className="font-bold text-gray-900 dark:text-white mb-2">Scheduling Agents</h4>
+                      <p className="text-gray-600 dark:text-gray-300 text-sm">Appointment booking, reminders, and calendar optimization</p>
                     </div>
                     <div>
-                      <h4 className="font-bold text-gray-900 mb-2">EMR Assistance</h4>
-                      <p className="text-gray-600 text-sm">Documentation support, note generation, and record management</p>
+                      <h4 className="font-bold text-gray-900 dark:text-white mb-2">EMR Assistance</h4>
+                      <p className="text-gray-600 dark:text-gray-300 text-sm">Documentation support, note generation, and record management</p>
                     </div>
                     <div>
-                      <h4 className="font-bold text-gray-900 mb-2">Insurance Workflow</h4>
-                      <p className="text-gray-600 text-sm">Eligibility verification, claims processing, and authorization handling</p>
+                      <h4 className="font-bold text-gray-900 dark:text-white mb-2">Insurance Workflow</h4>
+                      <p className="text-gray-600 dark:text-gray-300 text-sm">Eligibility verification, claims processing, and authorization handling</p>
                     </div>
                   </div>
                 </div>
@@ -334,7 +334,7 @@ export default function AgentEcosystemPage() {
           <h2 className="text-4xl sm:text-5xl font-bold text-white mb-6">
             Ready to Deploy AI Agents?
           </h2>
-          <p className="text-xl text-gray-300 mb-10 max-w-3xl mx-auto">
+          <p className="text-xl sm:text-2xl text-gray-600 dark:text-gray-300 mb-10 leading-relaxed max-w-3xl mx-auto">
             Start transforming your operations with our comprehensive AI agent ecosystem
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
@@ -346,7 +346,7 @@ export default function AgentEcosystemPage() {
             </Link>
             <Link
               href="/products"
-              className="px-8 py-4 bg-white text-gray-900 rounded-xl font-semibold hover:bg-gray-100 transition-all duration-300 text-lg"
+              className="px-8 py-4 bg-white text-gray-900 hover:bg-gray-100 rounded-xl font-semibold transition-all duration-300 text-lg"
             >
               View Agent Suites
             </Link>
